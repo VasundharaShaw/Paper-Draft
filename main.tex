@@ -60,13 +60,22 @@ Since our main focus lies in probing the magnetic field in the Galactic halo, we
 \fi
 
 \section{Methodology}
+\label{method}
+
 % Toy model introduction and comparison to JF12 
 \subsection{Galactic Halo Magnetic Field Model}
+\label{GMF}
 In this paper we motivate a toy model as means of a preliminary attempt to provide a model for the Galactic halo bubbles. We propose a simple axisymmetric torroidal field with a Kolmogorov turbulent field with a phase-space spectrum of $11/3$ given by the following expression:
 \begin{equation}\label{TM_equation}
         B_{\mathrm{toy}}= B_{\rm{str}}\mathrm{e}^{{(-\abs{{z}}/Z_{{\mathrm{mag}}})}} \mathrm{e}^{{(-z_{{\mathrm{min}}}/\abs{{z}})}}\mathrm{e}^{{(-\abs{{r}}/R_{{\mathrm{mag}}})}} + B_{\rm{tur}}
 \end{equation}
-The structured field has 3 free parameters: $B_{\rm str}$ as the peak value of the field and $R_{\rm {mag}}$ and $Z_{\rm {mag}}$ the radial and azimuthal cut off respectively. The direction of the toroidal field is opposite above and below the Galactic plane. The visualisation of the field in XY and XZ cross-section is shown in figure[\ref{fig:Vis_TM}]. We used the turbulent field module of CRPropa~3 \cite{CRPropa3_2016} for estimating the values of $B_{\rm{tur}}$. The turbulent field has only 1 free parameter which is the peak of value $ B_{\rm{tur}}$, the coherence length of the field is kept fixed at 100~pc for simplicity. %\Andrew{for simplicity?}. 
+The structured field has 3 free parameters: $B_{\rm str}$ as the peak value of the field and $R_{\rm {mag}}$ and $Z_{\rm {mag}}$ the radial and azimuthal cut off respectively. The direction of the toroidal field is opposite above and below the Galactic plane. The visualisation of the field in XY and XZ cross-section is shown in
+figure[\ref{fig:Vis_TM}]. 
+
+We use CRPropa~3 \cite{CRPropa3_2016} for generating turbulent fields which has a power law spectrum and peak field value of $B_{\rm{tur}}$. 
+The minimum and maximum values of wavelength to generate these fields are  $L_{min}$ = 200 pc and $L_{max}$ = 400 pc. For computational reasons we do not have a large difference between  $L_{min}$ and $L_{max}$.
+The turbulent field thus has effectively only 1 free parameter which is the peak of value $ B_{\rm{tur}}$, the coherence length of the field is kept fixed at 150~pc for simplicity.  In appendix ~\ref{Appendix_B} we show the power-spectrum plot this field.
+
 Since, we focus only on the Galactic latitude region of the sky which probes the Galactic halo, we do not include any disk magnetic field component in this model. 
 For the purposes of comparison we used the JF12 model as it is one of the most widely known, Galactic magnetic field models.
 We studied each component of the JF12 field separately in order to ascertain how the different components of the Galactic magnetic field model act individually and together. However, it should be noted that the JF12 model was motivated by observations which masked out a large part of the Galactic bubble region, and adopts magnetic fields strengths weaker than the ones suggested by S-PASS observation.% Based on observations, it is highly likely that the strength of the magnetic field in the Galactic halo is underestimated in the JF12 model. \Arjen{This statement might need a bit more clarification, it's rather strong and I don't think this is generally known/realised/accepted by everyone. Perhaps at least a mention of which observations show this is appropriate.}
@@ -126,7 +135,7 @@ where the functions,
 \begin{align}
 F(x) = x \int_x^\infty K_{5/3}(x') dx',  \hspace{1cm}  \&   G(x) = x K_{2/3}.
 \end{align}
-$B_{\mathrm{crit}} \frac{m_e^2c^3}{e\hbar} = 4.313 \times 10^{13} G$ is defined as the critical magnetic field, $m_e = 0.5 \times 10^6$ eV is the mass of electron , $h = 4.136 \times 10^-15$ eV-sec is the Planck's constant and $\alpha = \frac{1}{137}$ is the fine structure constant.
+$B_{\mathrm{crit}} \frac{m_e^2c^3}{e\hbar} = 4.414 \times 10^{13}$~G is defined as the critical magnetic field, $m_e = 0.511$ MeV is the mass of electron , $h = 4.136 \times 10^{-15}$~eV-sec is the Planck's constant and $\alpha \approx \frac{1}{137}$ is the fine structure constant.
 
 For clarity, several of the conventions are noted. The parallel component of polarisation (${J_{\parallel}}$) is orientated in the same direction as  $\vec{B_{\perp}}$, and the perpendicular component of polarisation (${J_{\perp}}$) is perpendicular to $\vec{B_{\perp}}$. The Stokes parameters at each point along the line of sight can be written in terms of the intrinsic polarisation angle $\Psi^l_{\rm in}$ which is the angle between the line of sight perpendicular component of the magnetic field $B_{\perp}$ and Galactic south at each step. The conventions adopted here matches that used by the Planck collaboration \cite{Planck_XIX} based on the $HEALPix^3$\footnote{\textcolor{purple}{https://healpix.jpl.nasa.gov/}} software by \cite{Healpix_2005}. For each step along the line-of-sight, both  ${J_{\perp}^l}$ and ${J_{\parallel}^l}$ are subsequently used to obtain the $Q$ and $U$ Stokes parameters. The integrated values along the line of sight can be defined as  $Q^{\rm tot}_{\rm in}$ and $U^{\rm tot}_{\rm in}$ as:
 \begin{eqnarray}
@@ -159,12 +168,7 @@ The intrinsic polarisation angle $\Psi_{\rm in}$ between the Galactic south and 
 % discussion of data sets used
 We used publicly available Planck satellite data because of its varied radio energy bands ranging from 30~GHz to 857~GHz. We intentionally do not consider the alternative low frequency data available from S-PASS, since this data set masks out a large region of the Galactic halo bubbles and would not prove suitable for our study. Since, our aim was to probe not just the strength but also the orientation of magnetic field we used the polarised radio data at 30~GHz from Planck where the peak frequency is at 28.4~GHz with a band width of 9.8~GHz. At this frequency we are dominated by polarised synchrotron emission and the effect of Faraday rotation is very small. %(see section \ref{Faraday_Rotation}). 
 The 30~GHz Planck data cannot be used to probe synchrotron intensities because at this frequency the unpolarised sky is dominated by thermal bremsstrahlung, anomalous microwave emission and synchrotron radiation equally. Hence, we also do a comparison with the 408~MHz Haslam data for total intensity where most of the unpolarised radiation comes from the synchrotron radiation.
-
-\subsubsection{Implementation-\Vasu{This section title can be removed once we have finalised the write up.}}
-
-We now have the necessary tools, a magnetic field model and electron distribution to simulate polarised synchrotron radiation maps.
-All the calculations for the purpose of this paper are done matching the Planck 30~GHz maps. At such frequencies the contribution from Faraday rotation will be negligible. We did however, tests at much lower frequencies where the effect of Faraday rotation does kick in.  To estimate the best fit values we did an extensive 5 parameter grid search with 1 million grid points distribution equally among the 5 parameters. Using the outcome of this 5 parameter grid scan we implemented an equipartition condition between magnetic fields $W_{\rm mag}$ and cosmic rays $W_{\rm particles}$.
-Here, $W_{\rm mag}$ is the total energy both in the structured and the turbulent fields and $W_{\rm particles}$ is the total energy of cosmic ray electrons and protons where proton to electron ratio is 100. We then put a conservative constraint on the ratio of $W_{\rm mag}$ and $W_{\rm particles}$. A detailed analysis of these methods are presented in the next \textcolor{blue}{Results} section.
+ \textcolor{blue}{Results} section.
 \textcolor{purple}{Vasu-write the section number}
 
 \clearpage
@@ -174,12 +178,17 @@ Here, $W_{\rm mag}$ is the total energy both in the structured and the turbulent
 
 \Vasu{I have added the points to address in the result section.}
 %% Skymap comparison and explanation of smoothening method
-We use the techniques mentioned in Section 2 to generate synthetic polarised synchrotron radiation skymaps. The model consists of 5 free parameters \ref{Para_table}. 
+We generate polarised synchrotron emission maps from our model based on the synchrotron polarisation calculations as shown in section ~\ref{method}. Our model comprises of 5 free parameters ~\ref{Para_table}. To find the best fit values we did a grid search over the 5 free parameters for over a million combinations of the parameter.
 
-We carried out three cuts in the skymap. One is at the Galactic disc since our model does not describe magnetic fields in the Galactic disc. Based on observations from \cite{eROSITA} and \cite{Su_2010} we carried out a second cut for longitudes  $\geq \pm 90^{\circ}$ from the Galactic center covering the area of the Galactic Halo bubbles.
+\Vasu{I have addressed this.}We use the techniques \Andrew{techniques? synchrotron emission methods you mean?} mentioned in Section~\ref{method} to generate synthetic polarised synchrotron radiation skymaps. 
+
+
+In our analysis, we first cut out three regions in the skymap. The first of these is at the Galactic disc region since our model does not describe magnetic fields in the Galactic disc. Based on observations from \cite{eROSITA} and \cite{Su_2010} we carried out a second cut for longitudes  $\geq \pm 90^{\circ}$ from the Galactic center, so as to ensure the analysis only covered the region occupied by the Galactic Halo bubbles.
 The third cut was made due to the disparity in understanding the origins of North Polar Spur (NPS). In \cite{Gina_2021} the higher latitudes of NPS seem to follow a trend to be originating locally rather than from Galactic center based on the starlight polarisation observations. To create the cut we follow the dimensions provided by \cite{Wolleben_2007}.
-We generate the skymaps using Healpix with a resolution of Nside = 32. To obtain best-fit for our model we ran a grid search for over a million configurations. We divide the sky in $15^{\circ}$ grid and ran a Gaussian smearing on both the observation and simulated data simulated data since for the sake of our work we were only interested in large scale structures in the Galactic Halo. 
-In \ref{fig:Skymaps} the smoothened skymap obtained from the best fit value of the parameters and the smoothened polarised Planck data is shown along with the residuals. 
+
+We generated skymaps using Healpix with a resolution of Nside = 32. To obtain best-fit for our model we ran a grid search for over a million configurations. We divided the sky into $15^{\circ}$ grid regions, utilising a Gaussian smearing of angular size $\sigma_{\theta}=15^{\circ}$ on both observational and simulated data set since with our simple toy model we are only interested in recreating large scale structure features in the Galactic Halo. 
+
+In Fig.~\ref{fig:Skymaps} the smoothened skymap obtained from the best fit value of the parameters and the smoothened polarised Planck data is shown along with the residuals. 
 %% Polarised Skymap
 
 \begin{figure}[h!]
@@ -191,7 +200,8 @@ In \ref{fig:Skymaps} the smoothened skymap obtained from the best fit value of t
     \label{fig:Skymaps}
 \end{figure}
 %% Polarisation fraction
-We also estimate the polarisation fraction obtained by the toy-model which is given in figure \ref{fig:Pol_Frac} which was calculated taking the ratio of polarised intensity and total intensity. 
+We also estimate the polarisation fraction obtained by the toy-model which is given in figure \ref{fig:Pol_Frac} which was calculated taking the ratio of polarised intensity and total intensity. The polarisation fraction from the toy model is comparable to the values as seen in the observation data \cite{2013} and \cite{WMAP_Page}.
+
 
 \begin{figure}[h!]
         \centering
@@ -200,32 +210,36 @@ We also estimate the polarisation fraction obtained by the toy-model which is gi
     \label{fig:Pol_Frac}
 \end{figure}
 
-\begin{table}[h!]
-  \begin{center}
-    \caption{List of the 5 free parameters for our study.}
-    \label{Para_table}
-    \begin{tabular}{|p{4cm}|p{5cm}|} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
-    \hline
-      \textbf{Parameters} & \textbf{Description}\\
-      \hline
-      \hline
-        $B_{\mathrm{str}} = 8~\mu$G &      Structured field strength \\
-        \hline
-        $R_{\mathrm{Mag}}$ and $R_{\mathrm{el}}$ = $5$~kpc & Radial extent beyond which the field and electron distribution starts to drop. \\
-        \hline
-        $Z_{\mathrm{Mag}}$ and $Z_{\mathrm{el}}$= $7$~kpc & Height of the halo field for the toy model beyond which field starts to drop.\\
-        \hline
-        $C_{\rm norm}$ = $5.88\times 10^{-14} ~{\rm cm}^{-3}$ & Normalisation factor for the electron distribution. \\
-        \hline
-        $L_{\rm c} = 150$~pc & Coherence length of the turbulent fields. \underline{This value remains \textcolor{blue}{fixed}}. \\ 
-        \hline
-       $B_{\mathrm{tur}} = 15~\mu$G & Turbulent field strength.\\
-       \hline
-    \end{tabular}
-  \end{center}
-\end{table}
 %% Uncertainities in the parameters
-We obtained $1\sigma$ constraint for $B_{\mathrm Mag}$ = [2,9]$\mu$ G,$B_{\mathrm tur}$ = [4,15)$\mu$ G , $R_{\mathrm Mag}$ = [4,5), $Z_{\mathrm Mag}$ = [6,7) and $C_{\mathrm norm}$= $\mathrm{(5\times 10^{-14},8.83}\times 10^{-13}]$. 
+\label{Para_table}
+%\setlength{\arrayrulewidth}{0.5mm}
+%\setlength{\tabcolsep}{18pt}
+%\renewcommand{\arraystretch}{1.5}
+%\centering
+\begin{center}
+\begin{tabular}{ |p{2.cm}|p{4cm}|p{4cm}|  }
+\hline
+\multicolumn{3}{|c|}{Best-fit value with 1-$\sigma$ constraint} \\
+\hline
+Parameter & Best-fit value &Description \\
+\hline
+\hline
+$B_{\mathrm{str}} $& $[8]^{2}_{9}$ ~ $\mu$G & Structured field strength \\
+\hline
+$B_{\mathrm{tur}} $& $ [15]^{4}_{} ~\mu$G & Turbulent field strength.\\
+\hline
+$R_{\mathrm{Mag}}$ = $R_{\mathrm{el}}$ & $[5]^{4}_{}$ ~kpc & Radial extent beyond which the field and electron distribution starts to drop. \\
+\hline
+$Z_{\mathrm{Mag}}$ = $Z_{\mathrm{el}}$ & $[7]^{6}_{}$~kpc & Height of the halo field for the toy model beyond which field starts to drop.\\
+\hline
+$C_{\rm norm}$ & $[10^{-13.230}]_{10^{-12.053}}$ ${\rm cm}^{-3}$ & Normalisation factor for the electron distribution.\\
+\hline
+\end{tabular}
+\end{center}
+
+In table ~\ref{Para_table} we provide the list of all free parameters and the constraints obtained on them. The spatial parameters $R_{\mathrm{Mag}}$ = $R_{\mathrm{el}}$ and $Z_{\mathrm{Mag}}$ = $Z_{\mathrm{el}}$ for magnetic field and electron distribution extent has been kept the same. The reason for this constrain is that synchrotron radiation will only be emitted when both non-thermal electrons and magnetic fields are present. Hence even if the geometry of the fields differ from the electron distribution we can only probe it in the regime where both fields and electrons are present.
+\newline
+%We obtained $1\sigma$ constraint for $B_{\mathrm Mag}$ = [2,9]$\mu$ G,$B_{\mathrm tur}$ = [4,15)$\mu$ G , $R_{\mathrm Mag}$ = [4,5), $Z_{\mathrm Mag}$ = [6,7) and $C_{\mathrm norm}$= $\mathrm{(5\times 10^{-14},8.83}\times 10^{-13}]$. 
 
 \begin{figure}[h!]
         \centering
@@ -237,7 +251,6 @@ We obtained $1\sigma$ constraint for $B_{\mathrm Mag}$ = [2,9]$\mu$ G,$B_{\mathr
 
 
 
-The polarisation fraction from the toy model is comparable to the values as seen in the observation data \cite{2013} and \cite{WMAP_Page}.
 \begin{itemize}
  
     \item Arrival directions from cosmic rays-comparison between JF12 halo fields and toy model halo fields at 100 EeV and 30 EeV for protons and nitrogen.
@@ -329,12 +342,22 @@ We can take two test cases (I \& II) given in figure(\ref{fig_tot_intensity}) an
     \caption{Simplified diagram of emission components for total and polarised intensities in terms of the polarisation ellipses.}
 \end{figure}
 
-
+\newpage
+\section{Appendix B}\label{Appendix_B}
+As discussed in section ~\ref{GMF} we generate the turbulent fields for our model using CRPropa3 ~\cite{CRPropa3_2016}. We the minimum and maximum wavelength we use to generate these fields are 
+$L_{min}$ = 200 pc and $L_{max}$ = 400 pc and $L_{coh} \approx $~150 kpc. One of the major reasons why we do not have enough decades covered for the wavelength is because of the time it takes to generate these fields using CRPropa. 
+We looked at power spectrum for different realisations of the turbulent field. In figure ~\ref{fig:PowerSpectrum} we plot power spectrum in X,Y and Z directions by averaging over the other two directions. We chose this particular realisation since it followed closely a power law spectrum of index (5/3). 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 12cm]{Images/Jan3_Test_PowerSpectrum_vs_lambda_seed_10.png}
+    \caption{Power spectrum plot versus wavelength for X, Y and Z direction.}
+    \label{fig:PowerSpectrum}
+\end{figure}
 \section{Test skymap for arrival directions for the same source!}
 
 \subsection{Arrival directions from sources on a grid for 30EeV and proton}
 
-
+\iffalse
 
 \newgeometry{top=20mm, bottom=20mm,lmargin=1.mm,rmargin=1.mm} 
 \begin{figure}[h!]
@@ -348,7 +371,7 @@ We can take two test cases (I \& II) given in figure(\ref{fig_tot_intensity}) an
 \end{figure}
 \newpage
 
-
+\fi
 \iffalse
 
 \subsubsection{Faraday Rotation}\label{Faraday_Rotation}
