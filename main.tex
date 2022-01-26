@@ -186,7 +186,7 @@ For our synchrotron emission study We use the publicly available from the Planck
 
 
 Utilising the setup described in the previous section (see section~\ref{Methods}), we generate a synthetic polarised synchrotron emission map for each parameter set of our toy model. The toy model comprises of 5 free parameters, (see table~\ref{Para_table}). The radial cut-off of the magnetic field and electron distribution is kept identical $R_{\mathrm{Mag}}$ = $R_{\mathrm{el}}$ and the same applies to the azimuthal cut-off $Z_{\mathrm{Mag}}$ = $Z_{\mathrm{el}}$. The reason for this constraint is that synchrotron radiation level depends on both non-thermal electron density and magnetic field strength. Thus, even if the spatial extend of the magnetic field differs from the electron distribution, one can only probe the field in the region where both the field and electrons are present. The minimum and maximum value for the spatial parameters are 2~kpc to 19~kpc, which are scanned over in step size of 1~kpc. 
-The range over which both $B_{\rm str}$ and $B_{\rm tur}$ are scanned is 2$~\mu$G to 19$~\mu$G, with a step size of 1$~\mu$G. We calculate the polarised emission for one particular value of $\log_{10}(C_{\rm norm}[{\rm cm}^{-3}]) = -13.85$, and subsequently re-scale these results to obtain the polarised emission maps for different values of  $\log_{10}(C_{\rm norm} [{\rm cm}^{-3}])$, ranging this scan from $-10$ to $-15$ with a step size of $0.25$ (ie. in 20 steps).
+The range over which both $B_{\rm str}$ and $B_{\rm tur}$ are scanned is 2$~\mu$G to 19$~\mu$G, with a step size of 1$~\mu$G. We calculate the polarised emission for one particular value of $\log_{10}(C_{\rm norm}[{\rm cm}^{-3}]) = -13.85$, and subsequently re-scale these results to obtain the polarised emission maps for different values of  $\log_{10}(C_{\rm norm} [{\rm cm}^{-3}])$, ranging this scan from $-9.84$ to $-15.83$ with a step size of $0.24$ (ie. in 25 steps).
 
 
 %\Vasu{I have addressed this.}We use the techniques \Andrew{techniques? synchrotron emission methods you mean?} mentioned in Section~\ref{method} to generate synthetic polarised synchrotron radiation skymaps. 
@@ -214,6 +214,7 @@ We next estimate the polarisation fraction obtained by our best-fit toy-model wh
 \end{figure}
 
 \newpage
+
 %% Uncertainities in the parameters
 \label{Para_table}
 \begin{center}
@@ -232,6 +233,7 @@ $R_{\mathrm{Mag}}$ = $R_{\mathrm{el}}$ & $5_{-1}^{\infty}$~kpc & Radial cut off 
 \hline
 $Z_{\mathrm{Mag}}$ = $Z_{\mathrm{el}}$ & $7_{-1}^{+1}$~kpc & Azimuthal cut\\
 \hline
+\rule{0pt}{3ex} 
 ${\rm{log_{10}}}(C_{\rm norm} [{\rm cm}^{-3}]$) & ${-12.43}_{{-1.31}}^{{+0.32}}$ & Electron normalisation at 10~GeV\\
 \hline
 \end{tabular}
@@ -242,21 +244,87 @@ ${\rm{log_{10}}}(C_{\rm norm} [{\rm cm}^{-3}]$) & ${-12.43}_{{-1.31}}^{{+0.32}}$
 \section{Cosmic ray deflections from different magnetic field models}
 \label{Deflections}
 
-It is known that when a charged particle is moving in a magnetic field, it gyrates along the field lines by virtue of the Lorentz force. The radius of the circular motion that the particle undergoes is called the Larmor radius $r_L = \frac{\beta \gamma m\rm{c^2}}{Z\rm {e}B}$, $\gamma m\rm{c^2}$ is the energy ($E$) of the cosmic ray, $Z$ is the atomic number and $\beta = 1$ for cosmic rays. 
-UHECRs also undergo the same Lorentz force when propagating through Galactic magnetic fields. The extra-Galactic magnetic field is rather weak $B = \rm few ~ nG$ and the ultra-high energy cosmic rays UHECRs $E > 10^{18}$ EeV are not sensitive to them. However, once they enter the Galaxy magnetic fields are of the order of few $\mu$G. In case for a proton at 6~EeV in $6~\mu$G field the $r_L \approx 1 ~ \rm kpc$ , this implies that the proton will be subject to deflection by the large scale Galactic magnetic fields.
+When charged particles propagate through magnetic fields, they precess around the field lines by virtue of the Lorentz force ($\it{\Gamma} m \frac{{\rm d}\vec{v}}{{\rm d}t} = \frac{q}{c} \vec{v}\cross \vec{B}$), where $\it{\Gamma} = \frac{E}{m\rm c^2}$ is the Lorentz factor and $q = Z \rm e$ here, $Z$ is the atomic number. 
+The radius of the circular motion that the particle undergoes is called the Larmor radius $r_L = \frac{pc}{Z\rm {e}B}$, where $p$ is the particle momentum. Since cosmic rays are highly relativistic $pc\approx E$. 
+UHECRs also undergo the same Lorentz force when propagating through Galactic magnetic fields. The extra-Galactic magnetic field is considered to be weak, with $B < \rm {nG}$ for $\lambda_{\rm coh}=1$~Mpc \cite{Arjen_2021} \Andrew{reference needed here}, and the ultra-high energy cosmic rays UHECRs $E > 10^{19}$ EeV and subsequently $r_{L}>{\rm 10~Mpc}$ are therefore not sensitive to them over 10~Mpc propagation distance scales. However, once they enter the Galaxy magnetic fields are of the order of few $\mu$G. In case for a proton at 6~EeV in $6~\mu$G field the $r_L \approx 1 ~ \rm kpc$ , this implies that the proton will be subject to deflection by the large scale Galactic magnetic fields.
 
 
-The propagation of the UHECRs is one of the one of the less understood phenomena in high energy physics. The propagation of cosmic rays is vital to understand their sources and this is in turn is sensitive to their deflection by magnetic fields.In this section we address the deflections of UHECRs using a toy model. The aim of this study is not to depict reality but to understand how simple structured and turbulent halo magnetic field model interacts with extra-Galactic cosmic rays. 
+We know that the propagation of cosmic rays is vital to understand their sources and this is in turn is sensitive to their deflection by magnetic fields. However both Galactic and extra-Galactic magnetic fields are poorly known. In this section we attempt to address the effect the toy model magnetic fields will have on the deflections of UHECRs. The aim of this study is not to depict reality but to understand how our simple structured and turbulent halo magnetic field model affects the propagation of extra-Galactic cosmic rays. 
 
-To propagate the cosmic rays we used the CRPropa3's \cite{CRPropa3_2016} Boris pusher which is a type of solver for Lorentz equations. CRPropa conserves the total energy and momentum of each particle during the propagation.  \Vasu{Arjen may be you have some comment on this ?!}
+To propagate the cosmic rays we used the CRPropa3's \cite{CRPropa3_2016} Boris pusher scheme in order to ensure particle's trajectory evolution satisfies the Lorentz force equation. CRPropa conserves the total energy each particle during the propagation.  \Vasu{Arjen may be you have some comment on this ?!}
 To achieve this we backtrack $10^7$ cosmic rays starting isotropically from earth to a distance of 20~kpc with a trajectory length of 300~kpc. We use nitrogen as a choice of our cosmic ray particles at 40~EeV energy. 
 
 
-In figure~\ref{fig:AD_Plots} we show two kinds of plots, \textit{1)} the histogram of all sky in log (density/str) of the backtracked positions for the cosmic rays (\textbf{left}), there are 180 bins both for longitudes and latitudes.\textit{2)} is the histogram of binned arrival directions of cosmic rays in a $5^{\circ}$ region from two known sources (\textbf{right}) Centaurus A (lat = $\rm 19.42^{\circ}$, lon = $\rm 309.51^{\circ}$) and NGC 253 (lat = $\rm -87.96^{\circ}$, lon = $\rm 309.51^{\circ}$).  We normalise both the skymaps with first making histograms with no-magnetic fields and then dividing the histogram generated using toy model by the former. This gives us a normalised value of the number of hits obtained as seen on the right in the figure~\ref{fig:AD_Plots}.
+In figure~\ref{fig:AD_Plots} we show two kinds of plots, \textit{1)} the histogram of all sky in log (density/str) of the backtracked positions for the cosmic rays (\textbf{left}), there are 180 bins both for longitudes and latitudes.\textit{2)} is the histogram of binned arrival directions of cosmic rays in a $5^{\circ}$ region from two known sources (\textbf{right}) Centaurus A (lat = $\rm 19.42^{\circ}$, lon = $\rm 309.51^{\circ}$) and NGC 253 (lat = $\rm -87.96^{\circ}$, lon = $\rm 97.36^{\circ}$).  We normalise both the skymaps with first making histograms with no-magnetic fields and then dividing the histogram generated using toy model by the former. This gives us a normalised value of the number of hits obtained as seen on the right in the figure~\ref{fig:AD_Plots}.
 
 It can be seen that the best fit and lower extreme parameters can clearly help in associating the deflected particles with their potential source. However, in the case of upper extreme parameters any connection between the point of origin of cosmic rays and their final positions is inconclusive. Cosmic rays from  sources like NGC253 get completely deflected by the magnetic field and hence we obtain a suppressed flux $\approx 5\%$ . In case of Centaurus A the final positions are spread out on the entire sky making it impossible to associate it with the source.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Lower Bound
 
-\begin{figure}[h]
+%%% NGC253 mean lat = -60.90231798341981 and lon = -9.43559404135401 degrees
+%%% NGC253 standard deviation lat = 15.69753500376699 and lon = 84.34462835618804 degrres
+%%% NGC253 variance lat = 0.07506157199726642 and lon = 2.167053299539898
+
+%%% CenA mean lat = 14.137807893047896 and lon = 39.59795385602137 degrees
+%%% CenA standard deviation lat = 22.427737611940568 and lon = 26.033548777265693 degrees
+%%% CenA variance lat = 0.15322360223540268 and lon = 0.20645313481127128
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Upper Bound
+
+%%% NGC253 mean lat = -2.322388780731066 and lon = -8.664927316867324 degrees
+%%% NGC253 standard deviation lat = 39.046039934810125 and lon = 98.20089826558244 degrres
+%%% NGC253 variance lat = 0.46441765734531754 and lon = 2.937552627840132
+
+%%% CenA mean lat = 0.33584693428469714 and lon = 32.07788442314936 degrees
+%%% CenA standard deviation lat = 38.066520277742804 and lon = 83.47296062758137 degrees
+%%% CenA variance lat = 0.44140890797613463 and lon = 2.1224935049576783
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Best Fit
+
+%%% NGC253 mean lat = -48.890861373380375 and lon = -1.3601224872785176 degrees
+%%% NGC253 standard deviation lat = 22.865215337703397 and lon = 83.981593692422 degrres
+%%% NGC253 variance lat = 0.15925949224439517 and lon = 2.1484386610540773
+
+%%% CenA mean lat = 8.648647356708622 and lon = 45.80995936362569 degrees
+%%% CenA standard deviation lat = 28.67183426567853 and lon = 35.674397052936385 degrees
+%%% CenA variance lat = 0.2504180851714255 and lon = 0.3876751990217161
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\label{AD_table}
+\begin{center}
+\begin{tabular}{|p{3.cm}|p{4.cm}|p{4.cm}|p{4.cm}|}
+    \hline
+    Parameter set & Mean (${}^\circ$)& SD (${}^\circ$) & Variance ($str$)\\
+    \hline
+    \multicolumn{4}{|c|}{Cen A} \\ 
+    \hline
+    \rule{0pt}{3ex} 
+    Best Fit & $\overline{b} = 8.64$, $\overline{l} = 45.80 $& $\sigma_{b} = 28.67 $, $\sigma_{l} = 35.67$ & $\sigma^2_{b} = 0.25 $, $\sigma^2_{l} = 0.38$ \\
+    \hline
+    \rule{0pt}{3ex} 
+     Lower & $\overline{b} = 14.13$  , $\overline{l} = 39.59$ & $\sigma_{b} = 22.42$, $\sigma_{l} = 26.03$ & $\sigma^2_{b} = 0.15 $, $\sigma^2_{l} = 0.20$\\
+    \hline
+    \rule{0pt}{3ex} 
+     Upper & $\overline{b} = 0.33$, $\overline{l} = 32.07$ & $\sigma_{b} = 38.06$ , $\sigma_{l} = 83.47$ & $\sigma^2_{b} = 0.46 $, $\sigma^2_{l} = 2.12$\\
+    \hline
+  \multicolumn{4}{|c|}{NGC 253} \\ 
+    \hline
+    \rule{0pt}{3ex} 
+    Best Fit & $\overline{b} = -48.89$, $\overline{l} = -1.36$  & $\sigma_{b} = 22.86$ , $\sigma_{l} = 83.98$ & $\sigma^2_{b} = 0.15 $, $\sigma^2_{l} = 2.14$ \\
+    \hline
+    \rule{0pt}{3ex} 
+     Lower & $\overline{b} = -60.90 $, $\overline{l} = -9.43$ & $\sigma_{b} = 15.69$, $\sigma_{l} = 84.34 $ & $\sigma^2_{b} = 0.07 $, $\sigma^2_{l} = 2.16$\\
+    \hline
+    \rule{0pt}{3ex} 
+     Upper & $\overline{b} = -2.32$, $\overline{l} = -8.66$ & $\sigma_{b} = 39.04$ , $\sigma_{l} = 98.20 $& $\sigma^2_{b} = 0.44 $, $\sigma^2_{l} = 2.93$\\
+    \hline
+\end{tabular}
+\end{center}
+\newpage
+\begin{figure}[h!]
 \includegraphics[width=9.0cm]{Images/Log_Bins_180_Historgam_BF_N2_Str_Tur_TM_40_EeV.png}
 \includegraphics[width=9.0cm]{Images/Bins_180_BF_N2_CenA_NGC253_Str_Tur_TM_40_EeV.png}
 \includegraphics[width=9.0cm]{Images/Log_Bins_180_Historgam_LB_N2_Str_Tur_TM_40_EeV.png}
