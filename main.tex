@@ -68,19 +68,18 @@ Several efforts have  been made in modelling magnetic fields in the Galaxy namel
 
 % Short note on non-thermal electron distribution.
 \Vasu{This paragraph needs more work}
-Apart from the Galactic magnetic field, our understanding of the non-thermal electron distribution in the Galaxy is also poor. We have some information on the distribution of cosmic ray electrons from the observations made by \Vasu{enter observation details.}\hyperlink{CR spectra}{https://arxiv.org/pdf/1108.4822.pdf} which peaks at 1GeV.
-Currently, there are a few ways to model the spatial distribution of these relativistic electrons; for example, with GALPROP \cite{Hammurabi} or the analytical WMAP model \cite{WMAP_Page}. \Arjen{Perhaps this paragraph can be extended a bit. Why do we care about the non-thermal electron distribution when talking about the Galactic magnetic field? Why is our knowledge of the non-thermal electron distribution so poor? How can it be measured and how do the models that you mention relate to the measurements?} \Vasu{Currently working on it.}
+Apart from the Galactic magnetic field, our understanding of the non-thermal electron distribution in the Galaxy is also poor. We have some information on the distribution of cosmic ray electrons from the observations made by AMS01 \cite{AMS_2002},CAPRICE94 \cite{CAPRICE_2001} , HEAT\cite{Heat_2001},SANRIKU\cite{Sanriku_1999}, BETS\cite{Bets_2001}, PPT-BETS\cite{PPT_BETS} , ATIC-1-2\cite{AITC_1_2},H.E.S.S.\cite{HESS_2008}\cite{HESS_2009}, Fermi-LAT \cite{FERMI_2009}\cite{FERMI_2010}, PAMELA \cite{Pamela}. Currently, there are a few ways to model the spatial distribution of these relativistic electrons; for example, with GALPROP \cite{Hammurabi} \cite{Orlando_2011} or the analytical WMAP model \cite{WMAP_Page}. The knowledge of non-thermal electrons is imperative in modelling Galactic magnetic field and generating synchrotron maps.  \Arjen{Perhaps this paragraph can be extended a bit. Why do we care about the non-thermal electron distribution when talking about the Galactic magnetic field? Why is our knowledge of the non-thermal electron distribution so poor? How can it be measured and how do the models that you mention relate to the measurements?} \Vasu{Currently working on it.}
 However, when modelling Galactic magnetic fields, Galactic cosmic ray electrons are not the only particles of interest. 
 
 % Importance of UHECRs
-An understanding of Galactic magnetic fields is tied to an understanding of the propagation and arrival direction of extra-galactic cosmic rays (with energies higher than $\approx$~$10^{18}$), also known  as ultra high energy cosmic rays (UHECRs). These UHECRs are constituted by charged protons or nuclei, and therefore their origin directions are scrambled by the magnetic fields in the path between the source and earth. The paths of these UHECRs can, therefore, be drastically changed depending on the strength and geometry of the field. Different models of the Galactic magnetic field give vastly different predictions for the deflection of UHECRs (see e.g.~Ref.~\textcolor{blue}{ADD REF}). Recently, significant anisotropies in the UHECR sky have been discovered~\textcolor{blue}{REFS TO DIPOLE/STARBURST CORRELATIONS/TA HOTSPOT}. Due to the deflections in the Galactic magnetic fields, the interpretation of these results in terms of the localisation of the UHECR sources is extremely hard and hence, the knowledge of Galactic magnetic fields is extremely important. 
+The propagation of cosmic rays is vital to understand their sources, and this is in turn is limited by our understanding of the intervening magnetic fields. Unfortunately, both Galactic and extra-Galactic magnetic fields are presently poorly understood. Arrival direction of extra-galactic cosmic rays (with energies higher than $\approx$~$10^{18}$), also known  as ultra high energy cosmic rays (UHECRs). These UHECRs are constituted by charged protons or nuclei, and therefore their origin directions are scrambled by the magnetic fields in the path between the source and earth. The paths of these UHECRs can, therefore, be drastically changed depending on the strength and geometry of the field. Different models of the Galactic magnetic field give vastly different predictions for the deflection of UHECRs (see e.g.~Ref.~\textcolor{blue}{ADD REF}). Recently, significant anisotropies in the UHECR sky have been discovered~\textcolor{blue}{REFS TO DIPOLE/STARBURST CORRELATIONS/TA HOTSPOT}. Due to the deflections in the Galactic magnetic fields, the interpretation of these results in terms of the localisation of the UHECR sources is extremely hard and hence, the knowledge of Galactic magnetic fields is extremely important. 
 
 % Introduction to brief layout of the paper
 The structure of this paper is the following. In section~\ref{Methods}, we provide a description of the electron distribution and the toy magnetic field model adopted in our study. In section~\ref{Results} synthetic polarised synchrotron maps are produced adopting this model, which are then compared against the Planck data. A grid scan of the model against the data is then made in order that constrained model parameters are obtained. In section~\ref{Deflections} we determine the arrival directions of ultra high energy cosmic rays $\rm E = 30$~EeV from our toy model and discuss how the uncertainties in the parameters can propagate errors in estimating the cosmic ray directions. %We also compare results from the toy model and the halo fields from JF12 model.
 Lastly, in section~\ref{Conclusions} we summarise our conclusions.
 
 
-\section{Methodology}
+\section{Methodology - Polarised synchrotron emission}
 \label{Methods}
 
 % Toy model introduction and comparison to JF12 
@@ -137,12 +136,10 @@ in units of ${\rm cm}^{-3}$, $p =3$ is the spectral index. The parameters, $C_\m
 
 \subsubsection{Intensity \& polarisation}
 Synchrotron radiation or magneto-bremsstrahlung radiation is the radiation produced due to charged particles that gyrate at relativistic speeds around a static magnetic field. The radiation produced via synchrotron is often linearly polarised.
-%The radiation received from a single particle is elliptically polarised and the sense of polarisation (right or left handed) is determined by whether the line of sight sits inside or outside the cone of radiation.
-%However, for a distribution of particles that vary smoothly with the pitch angle, the elliptical component cancels out and so the emission cones will contribute equally on each side of the line of sight. The radiation then is linearly polarised. 
+
 The polarised emission can be visualised as an ellipse where the major axis is the perpendicular component ($J_{\rm \perp}$) and the minor axis is the parallel ($J_{\parallel}$) component. We provide a detailed explanation of this in appendix~(\ref{Appendix_A}). 
 
 The two polarisation emission components, $J_{\perp}$ and $J_{\parallel}$, describe the emission level for a  given peak photon energy $E_{\gamma}^{\mathrm{peak}}$. Expressions for these two components are provided below in eqns~\ref{Jperp} and \ref{Jpara},
-%In this case, $E_{\gamma}^{\mathrm{peak}} = 1.175 \times 10^{-4}$~eV which is corresponding 28.4~GHz, the peak frequency for 30~GHz Planck data.
 
 \begin{strip}
 \begin{equation}
@@ -201,21 +198,26 @@ Utilising the setup described in the previous section (see section~\ref{Methods}
 
 %% Handling of data 
 In our study, we mask out three regions from our skymaps. The first of these is in the Galactic disc region between b = $(-15^{\circ},15^{\circ})$. For the second region, based on observations from \cite{eROSITA} and \cite{Su_2010}, we block out longitudes  $\geq \pm 90^{\circ}$ from the Galactic center (ie. all direction pointing away from the Galactic center direction), so as to ensure that our analysis only covers the region occupied by the Galactic Halo (Fermi and eRosita) bubbles. Lastly, we block out the region associated with the North Polar Spur (NPS). Our motivation here is that the higher latitudes of NPS seem to follow a trend to be originating locally rather than from Galactic center based on the starlight polarisation observations \cite{Gina_2021}. In order to remain as impartial as possible for the designation of this region, we adopt a cut for it selected in \cite{Wolleben_2007}. In fig.~\ref{fig:Skymaps} observational and synthetic skymaps are shown with these three regions removed.
-To obtain best-fit for our model we ran a grid search for over a million configurations. For each toy configuration, a synthetic skymap was generated using Healpix \cite{Healpix_2005}, adopting a resolution with Nside = 32. Since the interests of our study are focused on large scale structures, both the synthetic skymaps and observational data were smoothed out, using a Gaussian kernel, on size scale of $15^{\circ}$, to wash out smaller scale features. We then compare the simulated polarised emission with the Planck data at 30~GHz by evaluating the $\chi^{2}$ value of the model fit to the data. To find the best fit parameters and their constraints, we carry out a grid search over the 5 free parameters, sampling in total a million parameter points.
+
+%% Skymap comparison and explanation of smoothening method
+
+To obtain best-fit for our model we ran a grid search for over a million configurations. For each toy configuration, a synthetic skymap was generated using Healpix \cite{Healpix_2005}, adopting a resolution with Nside = 32. Since the interests of our study are focused on large scale structures, both the synthetic skymaps and observational data were smoothed out, using a Gaussian kernel, on size scale of $15^{\circ}$, to wash out smaller scale features. We then compare the simulated polarised emission with the Planck data at 30~GHz by evaluating the $\chi^{2}$ value of the model fit to the data. To find the best fit parameters and their constraints, we carry out a grid search over the 5 free parameters, sampling in total two million parameter points.
 
 
 \subsection{Observational Data}
 % discussion of data sets used
-For our synchrotron emission study We use the publicly available from the Planck satellite mission \footnote{\textcolor{purple}{http://pla.esac.esa.int/pla/}}. Specifically, we use the polarised radio data at 30~GHz from Planck where the peak frequency is at 28.4~GHz, with a band width of 9.8~GHz. At this frequency a considerable level of polarised synchrotron emission is observed, with a only a small level of Faraday rotation occurring at these high frequencies. However, we also note that in this 30~GHz band, the Planck data cannot be used to probe synchrotron intensity directly, since at this frequency the unpolarised sky receives a considerable contributions from both thermal bremsstrahlung and anomalous microwave emission, as well as synchrotron radiation \Andrew{reference needed to justify this claim}. 
+For our synchrotron emission study We use the publicly available from the Planck satellite mission \footnote{\textcolor{purple}{http://pla.esac.esa.int/pla/}}. Specifically, we use the polarised radio data at 30~GHz from Planck where the peak frequency is at 28.4~GHz, with a band width of 9.8~GHz. At this frequency a considerable level of polarised synchrotron emission is observed, with a only a small level of Faraday rotation occurring at these high frequencies. However, we also note that in this 30~GHz band, the Planck data cannot be used to probe synchrotron intensity directly, since at this frequency the unpolarised sky receives a considerable contributions from both thermal bremsstrahlung and anomalous microwave emission, as well as synchrotron radiation \cite{Planck_XIX} and \cite{Planck_XLII}. 
 
 \section{Results - Part I}
 \label{Results}
-
-%% Skymap comparison and explanation of smoothening method
+%% Details of uncertainities 
+We obtained 1$~\sigma$ constraint on our model shown in table~$\ref{Para_table}$. For the structured magnetic field strength $B_{\rm str}$ we obtain the best fit value of 3~$\mu$G with the upper extreme being 11~$\mu$G
+and the lower extreme 1~$\mu$G. Similarly, turbulent magnetic fields $B_{\rm tur}$ the mean value is 6~$\mu$G and upper and lower extreme values are 4~$\mu$G and 12~$\mu$G respectively. For spatial dimensions, we obtain a best fit vale of 7~kpc for the azimuthal extent $Z_{\rm Mag}/Z_{\rm el}$ and uncertainities of $\pm$ 1~kpc. These values are in agreement with the observations made by FERMI\cite{Su_2010}, S-PASS\cite{Carretti_2013} and eROSITA\cite{eROSITA}. We do not however, obtain an upper extreme value for $R_{\rm Mag}/R_{\rm el}$ only a lower extreme value of 4~kpc with the best fit value being 5~kpc. Again this best fit value is in agreement with the radial extent as obtained by the observations.
 
 In Fig.~\ref{fig:Skymaps} the smoothened skymap obtained from the best fit value of the parameters and the smoothened polarised Planck data is shown along with the residuals. The best-fit values used for the parameters are provided in table~\ref{Para_table}. 
 %% Polarisation fraction
 We next estimate the polarisation fraction obtained by our best-fit toy-model which is given in figure \ref{fig:Skymaps} which was calculated taking the ratio of the polarised to the total intensity. The polarisation fraction for the best-fit toy model is comparable to the values as seen in the observation data \cite{Carretti_2013} and \cite{WMAP_Page}.
+
 %% Polarised Skymap
 
 \begin{figure*}
@@ -234,7 +236,7 @@ We next estimate the polarisation fraction obtained by our best-fit toy-model wh
 
 \begin{table*}
 \centering
-\caption{CAPTION TEXT NEEDED HERE}
+\caption{Table of best fit parameters with uncertainties}
 \begin{tabular}{ |p{4.cm}|p{4.5cm}|p{6.5cm}|  }
 \hline
 \multicolumn{3}{|c|}{Best-fit value with 1-$\sigma$ constraint} \\
@@ -257,7 +259,8 @@ ${\rm{log_{10}}}(C_{\rm norm} [{\rm cm}^{-3}]$) & ${-12.43}_{{-1.31}}^{{+0.32}}$
 \label{Para_table}
 \end{table*}
 
-\section{Cosmic ray deflections from different magnetic field models}
+% \section{Cosmic ray deflections from different magnetic field models}
+\section{Methodology - Cosmic ray deflections from different magnetic field models}
 \label{Deflections}
 
 When charged particles propagate through magnetic fields, they precess around the field lines by virtue of the Lorentz force 
@@ -266,12 +269,10 @@ When charged particles propagate through magnetic fields, they precess around th
 \end{eqnarray}
 where $\bfm{\beta}$ is the particle's velocity vector, and $r_{L}$ is the particle's Larmor radius. UHECRs undergo the same Lorentz force when propagating through Galactic magnetic fields. The extra-Galactic magnetic field is considered to be weak, with $B < \rm {nG}$ for $\lambda_{\rm coh}=1$~Mpc \cite{Barrow_1997}, \cite{Kronberg_2007}, and the ultra-high energy cosmic rays UHECRs $E > 10^{19}$ EeV and subsequently $r_{L}>{\rm 10~Mpc}$ are therefore not sensitive to them over 10~Mpc propagation distance scales. However, once they enter the Galaxy magnetic fields are of the order of few $\mu$G. In case for a proton at 6~EeV in $6~\mu$G field the $r_L \approx 1 ~ \rm kpc$ , this implies that the proton will be subject to deflection by the large scale Galactic magnetic fields.
 
-The propagation of cosmic rays is vital to understand their sources, and this is in turn is limited by our understanding of the intervening magnetic fields. Unfortunately, both Galactic and extra-Galactic magnetic fields are presently poorly understood. In this section we attempt to address the effect the toy model magnetic fields will have on the deflections of UHECRs. The aim of this study is not to depict reality but to understand how our simple structured and turbulent halo magnetic field model affects the propagation of extra-Galactic cosmic rays. 
-
-To propagate the cosmic rays we used the CRPropa3's \cite{CRPropa3_2016} Boris pusher scheme in order to ensure particle's trajectory evolution satisfies the Lorentz force equation. CRPropa conserves the total energy each particle during the propagation.  \Vasu{Arjen may be you have some comment on this ?!}
+To propagate the cosmic rays we used the CRPropa3's \cite{CRPropa3_2016} Boris pusher scheme in order to ensure particle's trajectory evolution satisfies the Lorentz force equation. CRPropa conserves the total energy each particle during the propagation. 
 To achieve this we backtrack $10^7$ cosmic rays starting isotropically from earth to a distance of 20~kpc. We use nitrogen as a choice of our cosmic ray particles at 40~EeV energy. 
 
-
+\section{Results - II}
 In figure~\ref{fig:AD_Plots} we show, \textit{1)} the histogram of all sky in log (density/str) of the backtracked positions for the cosmic rays (\textbf{left}), there are 180 bins both for longitudes and latitudes.\textit{2)} is the histogram of binned arrival directions of cosmic rays in a $5^{\circ}$ region from two known sources (\textbf{right}) Centaurus A (lat = $\rm 19.42^{\circ}$, lon = $\rm 50.49^{\circ}$) and NGC 253 (lat = $\rm -87.96^{\circ}$, lon = $\rm 97.36^{\circ}$).  We normalise both the skymaps with first making histograms with no-magnetic fields and then dividing the histogram generated using toy model by the former. This gives us a normalised value of the number of hits obtained as seen on the right in the figure~\ref{fig:AD_Plots}.
 
 It can be seen that the best fit and lower extreme parameters can clearly help in associating the deflected particles with their potential source. However, in the case of upper extreme parameters any connection between the point of origin of cosmic rays and their final positions is inconclusive. Cosmic rays from  sources like NGC253 get completely deflected by the magnetic field and hence we obtain a suppressed flux $\approx 5\%$ . In case of Centaurus A the final positions are spread out on the entire sky making it impossible to associate it with the source. In table~{\ref{AD_table}} we show the 
@@ -309,7 +310,6 @@ It can be seen that the best fit and lower extreme parameters can clearly help i
 %%% CenA variance lat = 0.2504180851714255 and lon = 0.3876751990217161
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\caption{CAPTION TEXT GOES HERE}
 \label{AD_table}
 %\begin{center}
 \begin{table*}
@@ -355,6 +355,7 @@ It can be seen that the best fit and lower extreme parameters can clearly help i
 \includegraphics[width=0.49\linewidth]{Images/Bins_180_LB_N2_CenA_NGC253_Str_Tur_TM_40_EeV.png}\\
 \includegraphics[width=0.49\linewidth]{Images/Log_Bins_180_Historgam_UB_N2_Str_Tur_TM_40_EeV.png}
 \includegraphics[width=0.49\linewidth]{Images/Bins_180_UB_N2_CenA_NGC253_Str_Tur_TM_40_EeV.png}
+\includegraphics[width=0.49\linewidth]{Images/Colorbar.png}
 \caption{Log brightness of the backtracked positions for cosmic rays shown on \textbf{left} and the arrival directions of the cosmic rays from two known sources Cen A and NGC 253 on \textbf{right} (From table~\ref{Para_table} \textbf{Top} - Best Fit Parameters, {\textbf{Middle} - Lower extreme parameters)} \& {\textbf{Bottom} - Upper extreme parameters, we use $R_{\rm Mag} = $ 20~kpc since that is the maximum extent of the magnetic fields in our simulation.}}
 \label{fig:AD_Plots}
 \end{figure*}
