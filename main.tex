@@ -73,16 +73,17 @@ The observations from FERMI-LAT \cite{Su_2010} in the gamma ray regime unveiled 
 % Observations from S-PASS and Planck
 With the help of the aforementioned techniques, we can estimate the strength and direction of the magnetic field in different parts of the Galaxy. 
 For the Galactic halo the S-PASS \cite{Carretti_2013} observations  made at 2.3 GHz seem to suggest that the field strength in the halo bubbles can be anywhere between $6-10~\mu $G depending on the proton-electron ratio value adopted. S-PASS \cite{Carretti_2013} observations however are subject to depolarisation of polarised synchrotron radiation via Faraday rotation due to its relatively low observation frequencies. Additionally this data set is not sensitive to a portion of the Fermi bubble region of the sky due to the ground-based location of the instrument allowing only observations in the southern terrestrial hemisphere. For this reason data from Planck and WMAP are more helpful when probing magnetic fields in the Galactic halo due to their all-sky coverage and observation bandwidths which are not sensitive to Faraday rotation effects.
+% Short note on non-thermal electron distribution.
+Knowledge of non-thermal electron distribution is critical in the modelling of Galactic magnetic fields, which are both required inputs for the determination of synthetic synchrotron maps.
+We have direct information on the distribution of cosmic ray electrons at Earth from the observations made by AMS01 \cite{AMS_2002} \& \cite{AMS_2014}, CALET \cite{Calet_2017}, DAMPE \cite{Dampe_2017}. However, we do not have much knowledge of the electron distribution in the Galaxy.
+Currently there are a few ways to model the spatial distribution of these relativistic electrons; for example, either on theoretical ground using the GALPROP diffusive transport code \cite{Hammurabi} \cite{Orlando_2011} or on more phenomenological grounds as done in the WMAP data analysis \cite{WMAP_Page}.
 
 % Other magnetic field models and energies in the halo.
 
 Several efforts have  been made to model the magnetic fields in the Galaxy namely by \cite{Jaffe_2010}, \cite{Jaffe_2011}, \cite{Sun_2008}, and \cite{JF12}. It should be noted that our understanding of the magnetic field in the disc region of the Galaxy is much better than that of the halo region due to the larger amount of observational data present at varying frequencies. However, widely used models like JF12 \cite{JF12} have also made some efforts towards the modelling of the Galactic halo magnetic field. One drawback of JF12 \cite{JF12} is that it masks out the Fermi bubble regions in its models, but S-PASS \cite{Carretti_2013} observations tell us that magnetic field strength in this region is not negligible. Therefore, it is important to consider modelling the Galactic halo including the Fermi bubbles.
 
-
-% Short note on non-thermal electron distribution.
-\Vasu{This paragraph needs more work}
-Apart from the Galactic magnetic field, our understanding of the non-thermal electron distribution in the Galaxy is also rather limited. We have some direct information on the distribution of cosmic ray electrons at Earth from the observations made by AMS01 \cite{AMS_2002} \& \cite{AMS_2014}, CALET \cite{Calet_2017}, DAMPE \cite{Dampe_2017}, CAPRICE94 \cite{CAPRICE_2001} , HEAT \cite{Heat_2001}, SANRIKU \cite{Sanriku_1999}, BETS \cite{Bets_2001}, PPT-BETS \cite{PPT_BETS}, ATIC-1-2 \cite{AITC_1_2}, H.E.S.S. \cite{HESS_2008} \cite{HESS_2009}, Fermi-LAT \cite{FERMI_2009}, \cite{FERMI_2010} \& \cite{Fermi_2017}, PAMELA \cite{Pamela}. Currently there are a few ways to model the spatial distribution of these relativistic electrons; for example, either on theoretical ground using the GALPROP diffusive transport code \cite{Hammurabi} \cite{Orlando_2011} or on more phenomenological grounds as done in the WMAP data analysis \cite{WMAP_Page}. \Vasu{makee first  sentence}Knowledge of non-thermal electron distribution is critical in the modelling of Galactic magnetic fields, which are both required inputs for the determination of synthetic synchrotron maps.  \Arjen{Perhaps this paragraph can be extended a bit. Why do we care about the non-thermal electron distribution when talking about the Galactic magnetic field? Why is our knowledge of the non-thermal electron distribution so poor? How can it be measured and how do the models that you mention relate to the measurements?} \Vasu{Currently working on it.}
-However, when modelling Galactic magnetic fields, Galactic cosmic ray electrons are not the only particles of interest. 
+% \Vasu{makee first  sentence}  \Arjen{Perhaps this paragraph can be extended a bit. Why do we care about the non-thermal electron distribution when talking about the Galactic magnetic field? Why is our knowledge of the non-thermal electron distribution so poor? How can it be measured and how do the models that you mention relate to the measurements?} \Vasu{Currently working on it.}
+%However, when modelling Galactic magnetic fields, Galactic cosmic ray electrons are not the only particles of interest. 
 
 % Importance of UHECRs
 The propagation of cosmic rays is vital to understand their sources, and this in turn is limited by our understanding of the intervening magnetic fields. Unfortunately, both Galactic and extragalactic magnetic fields are presently poorly understood. Arrival direction of extragalactic cosmic rays (with energies higher than $\approx$~$10^{18}$) are also known as ultra high energy cosmic rays (UHECRs). These UHECRs are constituted by charged protons or nuclei, and therefore their origin directions are scrambled by the magnetic fields in the path between the source and earth. The paths of these UHECRs can therefore be drastically changed depending on the strength and geometry of the field. Different models of the Galactic magnetic field give vastly different predictions for the deflection of UHECRs (see e.g.~Ref.~ \cite{FARRAR_2014} \textcolor{blue}{ADD REF}). Recently, significant anisotropies in the UHECR sky have been discovered (see \cite{ICRC_2021} \cite{Auger_Starburst2018} \& \cite{ICRC_2019}. Due to the deflections in the Galactic magnetic fields, the interpretation of these results in terms of the localisation of the UHECR sources is extremely hard and hence, knowledge of Galactic magnetic fields is extremely important. 
@@ -304,12 +305,15 @@ In figure~\ref{fig:AD_Plots} we show :
     To create the these histograms we used 180 bins for both latitude and longitude. 
     We normalise these magnification maps made with toy model fields by dividing them with maps made without any magnetic fields. In each map the blue regions denote the areas of the sky where cosmic rays are suppressed and the red regions are the ones will have an abundance of cosmic rays. These regions are sensitive to both structured and turbulent field strengths and therefore the maximum case has a larger region of suppression in comparison to best-fit and minimum cases (see table \ref{Para_table}). This effect of magnetic fields can be seen for CenA (lat = $\rm 19.42^{\circ}$, lon = $\rm 50.49^{\circ}$) and NGC 253 (lat = $\rm -87.96^{\circ}$, lon = $\rm 97.36^{\circ}$) because of their positioning both the sources lie in the suppression region in the maximum case.
     \item Skymap for arrival direction
-    of cosmic rays from two known potential UHECRs sources CenA and NGC 253 on the (\textbf{right}). Similar to the above case of the magnification maps we backtrack cosmic rays starting from earth till 20~kpc. In a region of $5^{\circ}$ from the source we plot the arrival directions of cosmic rays. Like the magnification maps we normalise these maps with no magnetic field maps.  This gives us a normalised value of the number of hits obtained as seen on the \textbf{right}.Analogous to magnification maps the \textbf{top}, \textbf{middle} and \textbf{bottom} plots denote the best-fit, minimum and maximum cases. We also estimate the mean value of the $5^{\circ}$ spread and the mean direction denoted by a '\cdot'. 
+    of cosmic rays from two known potential UHECRs sources CenA and NGC 253 on the (\textbf{right}). Similar to the above case of the magnification maps we backtrack cosmic rays starting from earth till 20~kpc. In a region of $5^{\circ}$ from the source we plot the arrival directions of cosmic rays. Like the magnification maps we normalise these maps with no magnetic field maps.  This gives us a normalised value of the number of hits obtained as seen on the \textbf{right}.Analogous to magnification maps the \textbf{top}, \textbf{middle} and \textbf{bottom} plots denote the best-fit, minimum and maximum cases. We also estimate the mean value of the $5^{\circ}$ spread and the mean direction denoted by a $'\cdot'$. 
     The standard deviation for each source in each case is as follows:
-    \subitem Best fit $\sigma^2_{\rm NGC 253} = $ 0.13~str , $\sigma^2_{\rm Cen A} = $0.12~str \Andrew{($\sigma_{\rm Cen~~}=20^{\circ}$)}
-    \subitem Maximum $\sigma^2_{\rm NGC 253} = $0.46~str, $\sigma^2_{\rm Cen A} = $0.37~str \Andrew{($\sigma_{\rm Cen~~}=35^{\circ}$)}
-    \subitem Minimum $\sigma^2_{\rm NGC 253} = $~0.061~str, $\sigma^2_{\rm Cen A} = $~0.066~str \Andrew{($\sigma_{\rm Cen~~}=14^{\circ}$)}\newline
-    \Andrew{perhaps better to quote $\sigma_{a}= b^{\circ}$}
+    \begin{enumerate}
+        \item Best fit $\sigma^2_{\rm NGC 253} = $ 0.13~str , $\sigma^2_{\rm Cen A} = $0.12~str, {($\sigma_{\rm Cen~~}=20^{\circ}$)}
+        \item Maximum $\sigma^2_{\rm NGC 253} = $0.46~str, $\sigma^2_{\rm Cen A} = $0.37~str , {($\sigma_{\rm Cen~~}=35^{\circ}$)}
+        \item Minimum $\sigma^2_{\rm NGC 253} = $~0.061~str, $\sigma^2_{\rm Cen A} = $~0.066~str \Andrew{($\sigma_{\rm Cen~~}=14^{\circ}$)}\newline
+        \Andrew{perhaps better to quote $\sigma_{a}= b^{\circ}$}
+    \end{enumerate}
+
     It can be seen that in the maximum case it is harder to associate the cosmic rays to a source in comparison to best first or minimum case. This is due the fact that though structured fields dictate the direction of the deflection the turbulent fields spread out the directions. This is why when the turbulent fields as are stronger the arriving directions are spread out entirely over the sky making source localisation hard.
     \end{enumerate}
     
@@ -409,13 +413,15 @@ From both the magnification and arrival direction maps in \ref{fig:AD_Plots}. it
 % \end{frame}
 \section{Conclusions}
 \label{Conclusions}
-
+One primary conclusion of our study is to highlight the importance of the presence of magnetic fields and non-thermal electrons at high latitudes in order to explain the radio observations. It is important to note that for equipartition of energy to be valid if magnetic fields dominate then electron density has to be lower.
+%By definition of equipartition of energy the ratio between thermal pressure and magnetic pressure also known as plasma $\beta$ condition the magnetic the total energy in magnetic fields should be comparable to thermal particles \cite{Drury_2012}.
+Our toy model motivates magnetic field with a total energy content of $\approx 10^{55}$~ergs and the total energy in cosmic ray protons at 1 GeV $\approx 4\times 10^{55}$~ergs. These values are comparable with observations made by \cite{Su_2010} and \cite{eROSITA}.In comparison the total energy values in the halo fields of the JF12 model $4\times 10^{54}$~ergs and $3\times  10^{54}$~ergs for the torroidal halo and X-field respectively \cite{Taylor_2019}.
+Another inference 
 \begin{enumerate}
 
-    \item The presence of magnetic fields and non-thermal electrons at high galactic latitudes are necessary to explain the synchrotron radiation observed. if magnetic fields dominate then electron density has to be lower should equipartition exist. %parameters are delicately balanced !
-    \item Our toy model motivates magnetic field with a total energy content of $\approx 10^{55}$~ergs and the total energy in cosmic ray protons at 1 GeV $\approx 4\times 10^{55}$~ergs. For comparison, may be compare these numbers to the total energy in the JF12 model. 
-    \item JF12 torroidal halo has $4\times 10^{54}$~ergs and X field has $3\times 10^{54}$~ergs \cite{Taylor_2019}.
-    \item Plasma $\beta$ condition ?! ratio thermal pressure to magnetic pressure \cite{Drury_2012}
+    \item The presence of magnetic fields and non-thermal electrons at high galactic latitudes are necessary to explain the synchrotron radiation observed. if m should equipartition exist. %parameters are delicately balanced !
+    \item 
+    \item Plasma $\beta$ condition ?! 
     \item Variance for the different maps:
     
     \item High uncertainities in parameters means we need better probes to constrain the models. LOFAR and SKA radio band but different frequencies might be helpful
