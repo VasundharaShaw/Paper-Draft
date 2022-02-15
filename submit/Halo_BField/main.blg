@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2021/MacPorts 2021.58693_0)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: mnras.bst
+Database file #1: references.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty booktitle in ICRC_2021
+You've used 44 entries,
+            2881 wiz_defined-function locations,
+            1115 strings with 34488 characters,
+and the built_in function-call counts, 21259 in all, are:
+= -- 1952
+> -- 1402
+< -- 89
++ -- 593
+- -- 206
+* -- 2608
+:= -- 3253
+add.period$ -- 0
+call.type$ -- 44
+change.case$ -- 88
+chr.to.int$ -- 42
+cite$ -- 45
+duplicate$ -- 990
+empty$ -- 983
+format.name$ -- 350
+if$ -- 3754
+int.to.chr$ -- 3
+int.to.str$ -- 0
+missing$ -- 43
+newline$ -- 145
+num.names$ -- 292
+pop$ -- 188
+preamble$ -- 1
+purify$ -- 176
+quote$ -- 0
+skip$ -- 605
+stack$ -- 0
+substring$ -- 1580
+swap$ -- 479
+text.length$ -- 177
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 396
+warning$ -- 1
+while$ -- 322
+width$ -- 0
+write$ -- 452
+(There was 1 warning)
