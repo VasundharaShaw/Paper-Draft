@@ -145,7 +145,7 @@ It should be noted that in our description of the halo, it is assumed that both 
 Synchrotron radiation or magneto-bremsstrahlung radiation is the radiation produced due to charged particles that gyrate at relativistic speeds around a static magnetic field. Synchrotron radiation is sensitive to $B_{\perp}$, the magnetic field component perpendicular to the line of sight. The radiation produced via synchrotron is often linearly polarised.
 The polarised emissivity (emission per unit volume) spectral distribution can be visualised as an ellipse where the major axis is the perpendicular component ($J_{\rm \perp}$) and the minor axis is the parallel ($J_{\parallel}$) component (see Appendix~\ref{Appendix_A} for further discussion). 
 The two polarisation emission components, $J_{\perp}$ and $J_{\parallel}$, describe the emission spectrum for a given peak photon energy $E_{\gamma}^{\mathrm{peak}}$.
-Expressions for these two components, produced by electrons with pitch angle $\sin\alpha$, are provided below in Eqs.~\ref{Jperp} and \ref{Jpara},
+Expressions for these two components, produced by electrons with pitch angle $B_{\perp}/B$, are provided below in Eqs.~\ref{Jperp} and \ref{Jpara},
 
 \begin{equation}
  {J_{\perp}^l} = \frac{1}{\tau}  \int_{\mathrm{log}E_e^{\mathrm{min}}}^{\mathrm{log}E_e^{\mathrm{max}}} \  \frac{\mathrm{d}n_e}{\mathrm{dlog}E_{e}} \mathrm{dlog}E_{e}\  \left[F\left(\frac{E_{\gamma}}{E_{\gamma}^{\mathrm{peak}}}\right) + G\left(\frac{E_{\gamma}}{E_{\gamma}^{\mathrm{peak}}}\right)\right] \
@@ -161,9 +161,9 @@ Expressions for these two components, produced by electrons with pitch angle $\s
 
 \noindent where
 \begin{align}
-\tau^{-1} &= \frac{\sqrt{3} \alpha}{4\pi}\frac{B\sin\alpha}{B_{\mathrm{crit}}}\frac{m_{e}c^{2}}{\hbar},
+\tau^{-1} &= \frac{\sqrt{3} \alpha}{4\pi}\frac{B_{\perp}}{B_{\mathrm{crit}}}\frac{m_{e}c^{2}}{\hbar},
  & 
-E_{\gamma}^{\mathrm{peak}} &= \frac{3}{2}\Gamma_{e}^2 \frac{B\sin\alpha}{B_{\mathrm{crit}}} m_{e} c^2,
+E_{\gamma}^{\mathrm{peak}} &= \frac{3}{2}\Gamma_{e}^2 \frac{B_{\perp}}{B_{\mathrm{crit}}} m_{e} c^2,
 \nonumber
 \end{align}
 and
@@ -177,10 +177,10 @@ These expressions are provided in terms of the critical magnetic field strength,
 In the case of a mono-energetic electron energy distribution with density $n_{e}$, we can calculate the total radiated power density by summing Eqs. \ref{Jperp} and \ref{Jpara} and integrating over photon energy distribution:
 \begin{equation}
 %\frac{{\rm d}E_e^{\rm tot}}{{\rm d}t} = \frac{2}{\tau} n_{e}E_{\gamma}^{\rm peak} \int_0^{\infty} F(x)\rm{dx}
-\frac{{\rm d}E_e^{\rm tot}}{{\rm d}t} = \frac{2\alpha}{3} n_{e}\left(\frac{B\sin\alpha}{B_{\rm crit}}\right)^{2}\frac{E_{e}^{2}}{\hbar}%\left(\frac{B_{\perp}}{B_{\rm crit}\right)^{2}%\frac{E_{e}^{2}}{\hbar},
+\frac{{\rm d}E_e^{\rm tot}}{{\rm d}t} = \frac{2\alpha}{3} n_{e}\left(\frac{B_{\perp}}{B_{\rm crit}}\right)^{2}\frac{E_{e}^{2}}{\hbar}%\left(\frac{B_{\perp}}{B_{\rm crit}\right)^{2}%\frac{E_{e}^{2}}{\hbar},
 \label{Itot_l}
 \end{equation}
-where the result $\int_0^{\infty} F(x) \rm{d}x = 8\pi/(9\sqrt{3})$ \citep{Longair} has been used. The above expressions can be used to compute the pitch angle averaged synchrotron cooling time for electrons, given by $\tau_c = \frac{E_e}{{\rm d}E_e/{\rm d}t}$ \citep{Taylor_Matthews}.
+where the result $\int_0^{\infty} F(x) \rm{d}x = 8\pi/(9\sqrt{3})$ \citep{1959ApJ...130..241W} has been used. The above expressions can be used to compute the pitch angle averaged synchrotron cooling time ($\langle B_{\perp}^{2}\rangle = 2/3 B^{2}$) for electrons, given by $\tau_c = \frac{E_e}{{\rm d}E_e/{\rm d}t}$ \citep{Taylor_Matthews}.
 
 For clarity, several of the conventions we adopted are noted here. The parallel component of polarisation (${J_{\parallel}}$) is orientated in the same direction as  $\vec{B_{\perp}}$, and the perpendicular component of polarisation (${J_{\perp}}$) is perpendicular to $\vec{B_{\perp}}$. The Stokes parameters at each point along the line of sight can be written in terms of the intrinsic polarisation angle $\Psi^l_{\rm in}$ which is the angle between the line-of-sight perpendicular component of the magnetic field $B_{\perp}$ and Galactic south at each step. The conventions adopted here match those used by the Planck collaboration \citep{Planck_XIX} based on the $\rm HEALPix^3$~\footnote{\textcolor{purple}{https://healpix.jpl.nasa.gov/}} software by \cite{Healpix_2005}. For each step along the line of sight, both  ${J_{\perp}^l}$ and ${J_{\parallel}^l}$ are subsequently used to obtain the $Q$ and $U$ Stokes parameters. We obtain the values the intrinsic Stokes parameters $Q^{\rm tot}_{\rm in}$ and $U^{\rm tot}_{\rm in}$ by integrating over $Q$ and $U$ along the line of sight:
 
